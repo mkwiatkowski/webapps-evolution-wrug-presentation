@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ewolucja aplikacji webowych</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+      @import url(http://fonts.googleapis.com/css?family=Doppio+One&subset=latin,latin-ext);
+
+      body {
+        font-family: 'Droid Serif';
+        font-size: 30px;
+      }
+      pre { font-size: 22px; }
+      h1, h2, h3 {
+        font-family: 'Doppio One', sans-serif;
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+        right: 3em;
+        text-align: right;
+      }
+      h1 { font-size: 2em; }
+      h2 { font-size: 1.2em; }
+      h3 { font-size: 1em; }
+      li p { line-height: 1.25em; }
+      img { display: block; margin: 0 auto; max-width: 100%; max-height: 80%; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Ewolucja aplikacji webowych
+
+## Michał Kwiatkowski
+
+<small>freelance developer</small>
+
+<br/>
+
+<small>github: [mkwiatkowski](https://github.com/mkwiatkowski/)</small>
+
+<small>twitter: [@michalkw](https://twitter.com/michalkw)</small>
+
+---
+
+![Shelly Cloud Logo](shelly-logo.png)
+
+---
+
+![Logos](logos.png)
+
+---
+
+# Plan prezentacji
+## 1. Problem
+## 2. Możliwe rozwiązania
+## 3. Konsekwencje
+
+---
+
+# Jestem deweloperem i chcę rozwijać aplikację lokalnie
+
+![App server + local database](d1.png)
+
+---
+
+# Chcę wrzucić aplikację do pokazania klientowi
+
+![PHP deployment model](d2.png)
+
+---
+
+# Chcę wrzucić aplikację do pokazania klientowi
+
+![Capistrano deployment model](d3.png)
+
+---
+
+# Aplikacja długo się ładuje
+
+![Unicorn](d4.png)
+
+---
+
+# Mam za mało zasobów na obsłużenie ruchu
+
+![Frontend serving assets](d5.png)
+
+---
+
+# Moja aplikacja wolno odpowiada
+
+![Frontend serving cache](d6.png)
+
+---
+
+# Moja aplikacja wolno odpowiada cz. 2
+
+![Key-value store](d7.png)
+
+---
+
+![Logos](logos-selected.png)
+
+---
+
+# Moja aplikacja wolno odpowiada cz. 3
+
+![Background processing](d8.png)
+
+---
+
+# Mam jeszcze więcej użytkowników
+
+![Load balancer](d12.png)
+
+---
+
+# Chcę wiedzieć gdy moja aplikacja jest niedostępna
+
+> "Monitoring is for ops what testing is for dev"
+-- [Grig Gheorghiu](http://agiletesting.blogspot.com/2011/03/monitoring-is-for-ops-what-testing-is.html)
+
+---
+
+# Moje serwery aplikacyjne umierają
+
+## 502 Bad Gateway
+
+---
+
+# Moje serwery aplikacyjne umierają cz. 2
+
+![Monitoring tool](d9.png)
+
+---
+
+# Mam memory leak w aplikacji
+
+## Często trudne do namierzenia
+## ImageMagick
+
+---
+
+# Moja baza danych wolno odpowiada
+
+## Optymalizacja liczby zapytań
+## Optymalizacja SQL
+## Dostosowanie ustawień bazy danych, np. [work_mem](http://wiki.postgresql.org/wiki/Tuning_Your_PostgreSQL_Server#work_mem_maintainance_work_mem) w PostgreSQL
+
+---
+
+# Moja baza danych wolno odpowiada cz. 2
+
+## Replikacja
+
+![MongoDB replication](d10.png)
+
+---
+
+# Moja baza danych nie odpowiada
+
+## Failover
+
+![MongoDB failover](d11.png)
+
+---
+
+# Chcę skalować aplikację zależnie od potrzeb
+
+---
+
+# Skalowanie
+## wertykalne: większy serwer
+## horyzontalne: więcej serwerów
+
+---
+
+# I tak dalej...
+
+## Deployment bez downtime'u
+## Cofanie nieudanych deploymentów
+## Środowisko dla nowych programistów
+## Backup danych
+## Bezpieczeństwo
+## Uaktualnienia oprogramowania
+
+---
+
+![App server + local database](d1.png)
+
+---
+
+![Architecture](d13.png)
+
+---
+
+# Pytania?
+
+.footnote[Michał Kwiatkowski<br/>[michal@trivas.pl](mailto:michal@trivas.pl)]
+
+    </textarea>
+    <script src="remark-0.5.5.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var hljs = remark.highlighter.engine;
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+          highlightLanguage: 'remark'
+        }) ;
+    </script>
+  </body>
+</html>
